@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .error-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: bold;
+            color: #ff6b35;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        .error-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .error-message {
+            font-size: 1.2rem;
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .error-details {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .error-details h3 {
+            color: #ff6b35;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .error-details p {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .error-details ul {
+            color: #ccc;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .error-details li {
+            margin-bottom: 5px;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #ff6b35, #ff8c42);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin-right: 20px;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 107, 53, 0.4);
+        }
+
+        .home-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: transparent;
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid #fff;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .home-button:hover {
+            background: #fff;
+            color: #1a1a1a;
+        }
+
+        .technical-info {
+            background: rgba(255, 0, 0, 0.1);
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        .technical-info h4 {
+            color: #ff6b35;
+            margin-bottom: 10px;
+        }
+
+        .technical-info p {
+            color: #ffcccc;
+            margin-bottom: 5px;
+        }
+
+        .hidden-message {
+            color: #666;
+            font-size: 0.8rem;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 5rem;
+            }
+            
+            .error-title {
+                font-size: 2rem;
+            }
+            
+            .back-button, .home-button {
+                display: block;
+                margin: 10px auto;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Page Not Found</h1>
+        <p class="error-message">
+            Oops! The page you're looking for doesn't exist or has been moved.
+        </p>
+
+        <div class="error-details">
+            <h3>What happened?</h3>
+            <p>The requested resource could not be found on this server. This could be due to:</p>
+            <ul>
+                <li>The URL was mistyped</li>
+                <li>The page has been moved or deleted</li>
+                <li>You don't have permission to access this resource</li>
+                <li>The server is experiencing technical issues</li>
+            </ul>
+            
+            <h3 style="margin-top: 20px;">What can you do?</h3>
+            <p>You can try the following solutions:</p>
+            <ul>
+                <li>Check the URL for typos</li>
+                <li>Go back to the previous page</li>
+                <li>Visit our homepage</li>
+                <li>Contact our support team if the problem persists</li>
+                <li>If you're a developer, try with kula as a parameter</li>
+            </ul>
+        </div>
+
+        <div class="technical-info">
+            <h4>Technical Information:</h4>
+            <p>Error Code: HTTP 404</p>
+            <p>Server: nginx/1.18.0</p>
+            <p>Time: 2024-03-15 14:32:17 UTC</p>
+            <p>Request ID: 7f3a9b2e-4d8c-4b1a-9e5f-2c7b8a4d6e9f</p>
+            <p>User Agent: Mozilla/5.0 (compatible; WebBot/1.0)</p>
+        </div>
+
+        <div class="hidden-message">
+            <p>Debug tip: Sometimes going back and trying different approaches works better...</p>
+        </div>
+
+        <div style="margin-top: 40px;">
+            <a href="javascript:history.back()" class="back-button">← Go Back</a>
+            <a href="index.html" class="home-button">🏠 Home</a>
+        </div>
+    </div>
+
+    <script>
+        // Animation pour le code d'erreur
+        const errorCode = document.querySelector('.error-code');
+        
+        setInterval(() => {
+            errorCode.style.color = errorCode.style.color === 'rgb(255, 107, 53)' ? '#ff8c42' : '#ff6b35';
+        }, 1000);
+
+        // Effet de glitch occasionnel
+        setInterval(() => {
+            if (Math.random() < 0.1) {
+                errorCode.style.transform = 'translateX(' + (Math.random() * 4 - 2) + 'px)';
+                setTimeout(() => {
+                    errorCode.style.transform = 'translateX(0)';
+                }, 100);
+            }
+        }, 500);
+    </script>
+</body>
+</html>

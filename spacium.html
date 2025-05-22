@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestige Cars - Collection Exclusive</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff6b35;
+        }
+
+        .search-container {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .search-input {
+            padding: 12px 20px;
+            border: 2px solid #ff6b35;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-size: 16px;
+            width: 300px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .search-input:focus {
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .search-btn {
+            padding: 12px 25px;
+            background: linear-gradient(45deg, #ff6b35, #ff8c42);
+            border: none;
+            border-radius: 25px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .search-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #ff6b35;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #ccc;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .car-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .car-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .car-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .car-info {
+            padding: 25px;
+        }
+
+        .car-brand {
+            font-size: 1.1rem;
+            color: #ff6b35;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .car-model {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .car-description {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .car-price {
+            font-size: 1.3rem;
+            color: #ff6b35;
+            font-weight: bold;
+        }
+
+        .ferrari-card {
+            border: 2px solid rgba(255, 107, 53, 0.3);
+            box-shadow: 0 0 20px rgba(255, 107, 53, 0.1);
+        }
+
+        .footer {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 40px 0;
+            text-align: center;
+            color: #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .search-input {
+                width: 250px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .cars-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">PRESTIGE CARS</div>
+            <div class="search-container">
+                <input type="text" class="search-input" id="searchInput" placeholder="Rechercher une voiture...">
+                <button class="search-btn" onclick="handleSearch()">Rechercher</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="hero">
+            <h1>Collection Exclusive</h1>
+            <p>Découvrez notre sélection exceptionnelle de voitures de prestige. Chaque véhicule est choisi pour son excellence et son caractère unique.</p>
+        </section>
+
+        <section class="cars-grid">
+            <div class="car-card">
+                <img src="porsche1.jpg" alt="Porsche 911" class="car-image">
+                <div class="car-info">
+                    <div class="car-brand">PORSCHE</div>
+                    <div class="car-model">911 Carrera</div>
+                    <div class="car-description">L'icône sportive allemande par excellence. Performance, élégance et tradition se rencontrent dans cette légende automobile.</div>
+                    <div class="car-price">€ 120,000</div>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <img src="porsche2.jpg" alt="Porsche Cayenne" class="car-image">
+                <div class="car-info">
+                    <div class="car-brand">PORSCHE</div>
+                    <div class="car-model">Cayenne Turbo</div>
+                    <div class="car-description">SUV de luxe alliant puissance et confort. L'esprit Porsche dans un format familial haut de gamme.</div>
+                    <div class="car-price">€ 95,000</div>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <img src="porsche3.jpg" alt="Porsche Panamera" class="car-image">
+                <div class="car-info">
+                    <div class="car-brand">PORSCHE</div>
+                    <div class="car-model">Panamera 4S</div>
+                    <div class="car-description">Berline sportive quatre portes offrant un équilibre parfait entre performance et praticité quotidienne.</div>
+                    <div class="car-price">€ 110,000</div>
+                </div>
+            </div>
+
+            <div class="car-card ferrari-card">
+                <img src="ferrari.jpg" alt="Ferrari F8" class="car-image">
+                <div class="car-info">
+                    <div class="car-brand">FERRARI</div>
+                    <div class="car-model">F8 Tributo</div>
+                    <div class="car-description">La quintessence de l'art automobile italien. Un chef-d'œuvre de technologie et de passion.</div>
+                    <div class="car-price">€ 280,000</div>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <img src="porsche4.jpg" alt="Porsche Macan" class="car-image">
+                <div class="car-info">
+                    <div class="car-brand">PORSCHE</div>
+                    <div class="car-model">Macan GTS</div>
+                    <div class="car-description">SUV compact sportif, parfait pour une conduite dynamique en toutes circonstances.</div>
+                    <div class="car-price">€ 85,000</div>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <img src="porsche5.jpg" alt="Porsche Taycan" class="car-image">
+                <div class="car-info">
+                    <div class="car-brand">PORSCHE</div>
+                    <div class="car-model">Taycan Turbo S</div>
+                    <div class="car-description">L'avenir de la sportivité électrique. Performance zéro émission sans compromis sur le plaisir de conduite.</div>
+                    <div class="car-price">€ 185,000</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Prestige Cars. Tous droits réservés. | Excellence automobile depuis 1963</p>
+    </footer>
+
+    <script>
+        function handleSearch() {
+            const searchValue = document.getElementById('searchInput').value.toLowerCase().trim();
+            
+            if (searchValue === 'ferrari') {
+                // Redirection vers la page 2
+                window.location.href = 'aevum.html';
+            }
+            // Si ce n'est pas le bon mot de passe, ne rien faire (comme si le bouton était cassé)
+        }
+
+        // Permettre la recherche avec la touche Entrée
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                handleSearch();
+            }
+        });
+    </script>
+</body>
+</html>

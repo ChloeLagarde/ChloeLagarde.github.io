@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspection Technique</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff6b35;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .page-title h1 {
+            font-size: 3rem;
+            color: #ff6b35;
+            margin-bottom: 10px;
+        }
+
+        .page-title p {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        .car-display {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .car-front-view {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            background: url('Scene_pack_edit_-21.jpg') no-repeat center center;
+            background-size: contain;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        .instruction-panel {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .instruction-panel h2 {
+            color: #ff6b35;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .instruction-panel p {
+            color: #ccc;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .hint-box {
+            background: rgba(255, 107, 53, 0.1);
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .hint-box h3 {
+            color: #ff6b35;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .hint-box p {
+            color: #ffcccc;
+            font-size: 1rem;
+            font-style: italic;
+        }
+
+        .technical-specs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .spec-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .spec-card h3 {
+            color: #ff6b35;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .spec-card p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .congratulations {
+            background: linear-gradient(45deg, #ff6b35, #ff8c42);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .congratulations h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .congratulations p {
+            font-size: 1.2rem;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2rem;
+            }
+            
+            .technical-specs {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">INSPECTION TECHNIQUE</div>
+    </header>
+
+    <main class="main-container">
+        <section class="page-title">
+            <h1>Examen Détaillé</h1>
+            <p>Analyse complète du véhicule</p>
+        </section>
+
+        <section class="car-display">
+            <div class="car-front-view"></div>
+        </section>
+
+        <section class="instruction-panel">
+            <h2>🔍 Mission d'Inspection</h2>
+            <p>Vous devez maintenant procéder à un examen approfondi de ce véhicule exceptionnel.</p>
+            <p>Pour une inspection complète, il est essentiel d'examiner tous les composants mécaniques.</p>
+            <p><strong>Votre mission :</strong> Regarder sous le capot pour accéder aux spécifications techniques détaillées.</p>
+            
+            <div class="hint-box">
+                <h3>💡 Indice Technique</h3>
+                <p>Astuce : Modifiez l'URL pour accéder directement aux composants internes (ex: /capot.jpg)</p>
+            </div>
+        </section>
+
+        <section class="technical-specs">
+            <div class="spec-card">
+                <h3>Moteur</h3>
+                <p>Le cœur de cette machine se trouve sous le capot. Un moteur V12 atmosphérique de 6.5 litres développant une puissance exceptionnelle.</p>
+            </div>
+            
+            <div class="spec-card">
+                <h3>Transmission</h3>
+                <p>Boîte de vitesses à 7 rapports avec double embrayage, permettant des changements de vitesse ultra-rapides.</p>
+            </div>
+            
+            <div class="spec-card">
+                <h3>Suspension</h3>
+                <p>Système de suspension adaptatif magnétique pour un équilibre parfait entre confort et performance.</p>
+            </div>
+            
+            <div class="spec-card">
+                <h3>Freinage</h3>
+                <p>Disques carbone-céramique haute performance avec étriers à 6 pistons pour un freinage optimal.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
